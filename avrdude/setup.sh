@@ -39,13 +39,15 @@ if [ ! -f /usr/share/arduino/hardware/arduino/programmers.txt ]; then
 fi
 echo "OK"
 
-echo "Fetching files:"
-for file in boards.txt programmers.txt avrsetup ; do
-  echo "  $file"
-  rm -f $file
-  wget -q http://project-downloads.drogon.net/gertboard/$file
-done
-
+###############################################################
+# All files present locally, no need to fetch
+# echo "Fetching files:"
+# for file in boards.txt programmers.txt avrsetup ; do
+  # echo "  $file"
+  # rm -f $file
+  # wget -q http://project-downloads.drogon.net/gertboard/$file
+# done
+###############################################################
 echo "Replacing/updating files:"
 
 rm -f /usr/local/bin/avrsetup
@@ -81,5 +83,5 @@ doBackup /usr/share/arduino/hardware/arduino boards.txt
 doBackup /usr/share/arduino/hardware/arduino programmers.txt
 
 echo "All Done."
-echo "Check and reboot now to apply changes."
-exit 0
+# echo "Check and reboot now to apply changes."
+# exit 0
