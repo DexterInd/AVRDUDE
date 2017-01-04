@@ -51,7 +51,7 @@ echo "OK"
 echo "Replacing/updating files:"
 
 rm -f /usr/local/bin/avrsetup
-mv /tmp/avrsetup /usr/local/bin
+mv /home/pi/Dexter/lib/AVRDUDE/avrdude/avrsetup /usr/local/bin
 chmod 755 /usr/local/bin/avrsetup
 
 cd /etc
