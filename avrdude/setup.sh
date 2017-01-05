@@ -79,8 +79,8 @@ else
   echo "OK"
 fi
 
-doBackup /usr/share/arduino/hardware/arduino boards.txt
-doBackup /usr/share/arduino/hardware/arduino programmers.txt
+# doBackup /usr/share/arduino/hardware/arduino boards.txt
+# doBackup /usr/share/arduino/hardware/arduino programmers.txt
 
 echo "All Done."
 # echo "Check and reboot now to apply changes."
